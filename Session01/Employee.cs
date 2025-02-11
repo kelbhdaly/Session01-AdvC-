@@ -41,10 +41,27 @@ namespace Session01
 
         public override bool Equals(object? obj)
         {
-            return obj is Employee employee &&
-                   Id == employee.Id &&
-                   Name == employee.Name &&
-                   Salary == employee.Salary;
+            #region Is Operator
+
+            // Is Use To Check And Casting
+            // True Obj Is Employee Or Obj Inherit From Employee
+            // False Obj Is Not Employee
+
+
+            //return obj is Employee employee &&
+            //     employee.Id == Id && employee.Salary == Salary && Name == employee.Name; 
+            #endregion
+
+            #region As Operator
+
+
+            Employee? employee = obj as Employee;
+
+            if (employee is not null)
+                return employee.Id == Id && employee.Name == Name && employee.Salary == Salary;
+            else
+                return false;
+            #endregion
         }
 
         public override int GetHashCode()

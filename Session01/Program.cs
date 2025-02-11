@@ -71,19 +71,26 @@
 
 
             #region Equality And GetHashCode
-            Employee employee01 = new Employee(10, "Khaled", 10000);
-            Employee employee02 = new Employee(10, "Khaled", 10000);
+            //Employee employee01 = new Employee(10, "Khaled", 10000);
+            //Employee employee02 = new Employee(10, "Khaled", 10000);
 
-            if (employee01.Equals(employee02))
-                Console.WriteLine("EQUAL");
-            else
-                Console.WriteLine("NOT EQUAL");
+            //if (employee01.Equals(employee02))
+            //    Console.WriteLine("EQUAL");
+            //else
+            //    Console.WriteLine("NOT EQUAL");
 
-            Console.WriteLine($"Hash Code Of Employee 01 = {employee01.GetHashCode()}");
-            Console.WriteLine($"Hash Code Of Employee 02 = {employee02.GetHashCode()}");
+            //Console.WriteLine($"Hash Code Of Employee 01 = {employee01.GetHashCode()}");
+            //Console.WriteLine($"Hash Code Of Employee 02 = {employee02.GetHashCode()}");
             #endregion
 
 
+            #region Is && As Operators
+
+            //Employee employee01 = new Employee(10 , "khaled" , 1000);
+            //Employee employee02 = new Employee(10 , "khaled" , 1000);
+
+            //Console.WriteLine(employee01.Equals(employee02)); 
+            #endregion
         }
     }
 }
