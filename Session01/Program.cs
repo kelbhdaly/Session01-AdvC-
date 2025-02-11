@@ -53,25 +53,36 @@
             //    Console.WriteLine("EQUAL");
             //else
             //    Console.WriteLine("NOT EQUAL");
+            //Employee[] employees =
+            //{
+            //    new(10,"khaled" , 20000) ,
+            //    new(20,"May" , 10000) ,
+            //    new(30,"Omar" , 9000) ,
+            //    new(40,"Ali" , 3000) ,
+            //    new(50,"Ahmed" , 220000) ,
 
+            //};
 
+            //Employee employee01 = new(30, "Omar", 9000);
 
-
-
-            Employee[] employees =
-            {
-                new(10,"khaled" , 20000) ,
-                new(20,"May" , 10000) ,
-                new(30,"Omar" , 9000) ,
-                new(40,"Ali" , 3000) ,
-                new(50,"Ahmed" , 220000) ,
-
-            };
-
-            Employee employee01 = new(30, "Omar", 9000);
-
-            Console.WriteLine($"Index = {Helper<Employee>.LinerSearch(employees , employee01)}");
+            //Console.WriteLine($"Index = {Helper<Employee>.LinerSearch(employees , employee01)}");
             #endregion
+
+
+
+            #region Equality And GetHashCode
+            Employee employee01 = new Employee(10, "Khaled", 10000);
+            Employee employee02 = new Employee(10, "Khaled", 10000);
+
+            if (employee01.Equals(employee02))
+                Console.WriteLine("EQUAL");
+            else
+                Console.WriteLine("NOT EQUAL");
+
+            Console.WriteLine($"Hash Code Of Employee 01 = {employee01.GetHashCode()}");
+            Console.WriteLine($"Hash Code Of Employee 02 = {employee02.GetHashCode()}");
+            #endregion
+
 
         }
     }
