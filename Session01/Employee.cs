@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session01
 {
-    internal class Employee
+    internal class Employee :IEquatable<Employee> ,IComparable<Employee>
     {
 
         #region Properties
@@ -69,16 +69,34 @@ namespace Session01
             return HashCode.Combine(Id, Name, Salary);
         }
 
+        public bool Equals(Employee? employee)
+        {
+            if (employee is not null)
+                return employee.Id == Id && employee.Name == Name && employee.Salary == Salary;
+            else
+                return false;
+        }
+
+        public int CompareTo(Employee? emp)
+        {
+            //Compare Based Salary
+            if (emp is null)
+                return 1;
+            else
+                return Salary.CompareTo(emp.Salary);
+
+        }
+
 
 
         #endregion
 
 
         #region Methods
-        //public override string ToString()
-        //{
-        //    return $"Id = {Id} , Name = {Name} , Salary = {Salary}";
-        //}
+        public override string ToString()
+        {
+            return $"Id = {Id} , Name = {Name} , Salary = {Salary}";
+        }
 
 
         //public override bool Equals(object? obj)

@@ -1,4 +1,6 @@
-﻿namespace Session01
+﻿using Session01.Test;
+
+namespace Session01
 {
     internal class Program
     {
@@ -91,6 +93,83 @@
 
             //Console.WriteLine(employee01.Equals(employee02)); 
             #endregion
+
+            #region Equatabale
+
+            //Employee[] employees =
+            //{
+            //    new(10,"khaled" , 20000) ,
+            //    new(20,"May" , 10000) ,
+            //    new(30,"Omar" , 9000) ,
+            //    new(40,"Ali" , 3000) ,
+            //    new(50,"Ahmed" , 220000) ,
+            //};
+
+
+            //Employee emp = new Employee(30, "ali", 9000);
+            //int Result = Helper<Employee>.LinerSearch(employees , emp ,new EmployeeNameEqualityComparer());
+
+            //Console.WriteLine($"Index = {Result}"); 
+            #endregion
+
+            #region Test
+
+            #region Test01
+
+            //int[] number = { 1, 2, 3 };
+            //Console.WriteLine(Search<int>.Search02(number, 5)); 
+            #endregion
+
+
+            #region Test02
+            //Emp emp01 = new Emp(10, "Ali", 20000);
+            //Emp emp02 = new Emp(10, "Ali", 20000);
+
+            //Console.WriteLine(emp01.Equals( emp02));
+
+            //Console.WriteLine($"Hash Code Emp01 = {emp01.GetHashCode()}");
+            //Console.WriteLine($"Hash Code Emp02 = {emp02.GetHashCode()}"); 
+            #endregion
+
+            #region Test03
+            // Emp[] emps =
+            // {
+            //     new(10 , "Ali" , 2000),
+            //     new(20 , "Mohamed" , 2000),
+            //     new(30 , "Ali" , 2000),
+            //     new(40 , "khaled" , 2000),
+            // };
+
+            // Emp emp = new(20, "Mohamed", 2000);
+            //int Result= Search<Emp>.Search02(emps, emp, new Comparer());
+            // Console.WriteLine(Result); 
+            #endregion
+
+
+
+            #endregion
+
+
+            //int[] numbers = { 3, 8, 10, 6, 7, 30, 40 };
+
+
+
+            Employee[] employees =
+            {
+                new(10,"khaled" , 20000) ,
+                new(20,"May" , 10000) ,
+                new(30,"Omar" , 9000) ,
+                new(40,"Ali" , 3000) ,
+                new(50,"Ahmed" , 220000) ,
+            };
+
+            Helper<Employee>.BubbleSort(employees , new EmployeeNameComparer());
+            foreach (Employee item in employees)
+            {
+                Console.WriteLine(item);
+                
+            }
+
         }
     }
 }
