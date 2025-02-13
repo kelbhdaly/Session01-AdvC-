@@ -18,7 +18,7 @@ namespace Session01
             //X.name < y.name => -1
             //X.name == y.name => 0
 
-            //if (x is null || x.Name is null) return 1;
+            //if (x is null || x.Name is null) return -1;
             //else if (y is null || y.Name is null) return 1;
             //else
             //    return x.Name.CompareTo(y.Name);

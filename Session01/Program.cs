@@ -149,6 +149,7 @@ namespace Session01
 
             #endregion
 
+            #region BubbleSort
 
             //int[] numbers = { 3, 8, 10, 6, 7, 30, 40 };
 
@@ -163,13 +164,14 @@ namespace Session01
                 new(50,"Ahmed" , 220000) ,
             };
 
-            Helper<Employee>.BubbleSort(employees , new EmployeeNameComparer());
+            Helper<Employee>.BubbleSort(employees, new EmployeeNameComparer());
             foreach (Employee item in employees)
             {
                 Console.WriteLine(item);
-                
+
             }
 
+            #endregion
         }
     }
 }
